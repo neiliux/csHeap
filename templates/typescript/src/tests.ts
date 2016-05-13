@@ -1,9 +1,8 @@
 /// <reference path='../typings/main.d.ts' />
-let chai = require('chai');
-let assert = chai.assert;
+let expect = require('chai').expect;
 
 describe('main', () => {
     it('template test', () => {
-        assert.equal(1, 1);
+        expect(true).to.equal(true);
     });
 });
