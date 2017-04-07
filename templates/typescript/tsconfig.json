@@ -7,10 +7,19 @@
         "experimentalDecorators": true,
         "removeComments": false,
         "noImplicitAny": false,
-        "outDir": "output"
+        "outDir": "output",
+        "typeRoots": [
+            "./node_modules/@types"
+        ]
     },
     "exclude": [
         "node_modules",
         "typings"
+    ],
+    "types": [
+        "core-js"
+    ],
+    "include": [
+        "src/**/*"
     ]
 }

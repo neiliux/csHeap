@@ -7,7 +7,7 @@ gulp.task('build', function() {
     var tsProject = ts.createProject(path.resolve('./tsconfig.json'));
     return gulp
             .src(path.resolve('./src/**/*.ts'))
-            .pipe(ts(tsProject))
+            .pipe(tsProject())
             .pipe(gulp.dest('./output'))
 });
 

@@ -9,12 +9,12 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "chai": "^3.5.0",
-    "gulp": "^3.9.1",
-    "gulp-mocha": "^2.2.0",
-    "gulp-typescript": "^2.13.4",
-    "mocha": "^2.4.5",
-    "typescript": "^1.8.10",
-    "typings": "^0.8.1"
+    "chai": "*",
+    "gulp": "*",
+    "gulp-mocha": "*",
+    "gulp-typescript": "*",
+    "mocha": "*",
+    "typescript": "*",
+    "typings": "*"
   }
 }

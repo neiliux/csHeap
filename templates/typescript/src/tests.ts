@@ -1,4 +1,3 @@
-/// <reference path='../typings/main.d.ts' />
 let expect = require('chai').expect;
 
 describe('main', () => {
