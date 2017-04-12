@@ -1,5 +1,7 @@
 export class UnitOfWork {
     public isPermutation(str1: string, str2: string): boolean {
+        // Time complexity: O(N+N+N)
+        
         if (!str1 || !str2 || str1.length !== str2.length) {
             return false;
         }
