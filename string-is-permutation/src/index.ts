@@ -1,6 +1,7 @@
 export class UnitOfWork {
     public isPermutation(str1: string, str2: string): boolean {
-        // Time complexity: O(N+N+N)
+        // Time complexity: O(N+N) -- best case
+        // Time complexity: O(N+N*2) -- worst case
         
         if (!str1 || !str2 || str1.length !== str2.length) {
             return false;
@@ -9,21 +10,10 @@ export class UnitOfWork {
         let hash: any = {};
        
         for (let i=0, len=str1.length; i<len; i++) {
-            if (!hash[str1[i]]) {
-                hash[str1[i]] = 1;
-            } else {
-                hash[str1[i]]++;
-            }
+            hash[str1[i]] = this.processChar(hash[str1[i]]);
+            hash[str2[i]] = this.processChar(hash[str2[i]]);
         } 
         
-        for (let i=0, len=str2.length; i<len; i++) {
-            if (hash[str2[i]]) {
-                hash[str2[i]]--;
-            } else {
-                hash[str2[i]] = 1;
-            }
-        }
-  
         let result: boolean = true; 
         Object
             .keys(hash)
@@ -35,4 +25,10 @@ export class UnitOfWork {
 
         return result;
     } 
+
+    private processChar(count: number): number {
+        return !!count
+            ? count-1
+            : 1;
+    }
 }

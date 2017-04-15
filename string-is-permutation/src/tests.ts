@@ -18,9 +18,4 @@ describe('main', () => {
         let result: boolean = unitOfWork.isPermutation('aaabbbcccddeee', 'dabceabceabced');
         expect(result).to.equal(true);
     });
-
-    it('should return false when string contains permutation with additional characters of other string', () => {
-        let result: boolean = unitOfWork.isPermutation('abca', 'abcw');
-        expect(result).to.equal(false);
-    });
 });
